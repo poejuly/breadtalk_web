@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="cart.js" defer></script>
 </head>
 <body>
     <header>
@@ -29,61 +30,75 @@
             </ul>
         </nav>
         <div class="shop">
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="cart.html" aria-label="View shopping cart"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="#"><i class="fa-solid fa-circle-user"></i></a>
         </div>
     </header>
 
+    <section class="page-banner menu-banner" aria-labelledby="menu-banner-title">
+        <div class="page-banner-content">
+            <p class="banner-kicker">FROM OUR OVEN TO YOUR TABLE</p>
+            <h1 id="menu-banner-title">Bread worth slowing down for.</h1>
+            <p>Discover the loaves and pastries we bake with care every day.</p>
+        </div>
+    </section>
+
     <!-- product section -->
     <section class="product-section">
-        <h1>Best Seller</h1>
+        <h2>Best Seller</h2>
         <div class="productBox">
             <div class="box">
-                <img src="img/bread1.jpg" alt="product1">
+                <img src="img/bread1.jpg" alt="Country sourdough bread">
                 <div class="productDesc">
-                    <h2>Product1</h2>
+                    <h2>Country Sourdough</h2>
+                    <p>Slow-fermented for a crisp crust and a soft, tangy crumb.</p>
                     <p>$50.00</p>
-                    <a href="#" class="btn shopBtn">SHOP NOW</a>
+                    <button class="btn shopBtn" type="button" data-product-id="country-sourdough">ADD TO CART</button>
                 </div>
             </div>
             <div class="box">
-                <img src="img/bread2.jpg" alt="product2">
+                <img src="img/bread2.jpg" alt="Honey oat loaf">
                 <div class="productDesc">
-                    <h3>Product2</h3>
+                    <h3>Honey Oat Loaf</h3>
+                    <p>Soft-baked bread finished with golden oats and a touch of honey.</p>
                     <p>$20.10</p>
-                    <a href="#" class="btn shopBtn">SHOP NOW</a>
+                    <button class="btn shopBtn" type="button" data-product-id="honey-oat-loaf">ADD TO CART</button>
                 </div>
             </div>
             <div class="box">
-                <img src="img/bread3.jpg" alt="product3">
+                <img src="img/bread3.jpg" alt="Classic butter croissant">
                 <div class="productDesc">
-                    <h3>Product3</h3>
+                    <h3>Butter Croissant</h3>
+                    <p>Delicate, flaky layers baked until golden with real butter.</p>
                     <p>$11.20</p>
-                    <a href="#" class="btn shopBtn">SHOP NOW</a>
+                    <button class="btn shopBtn" type="button" data-product-id="butter-croissant">ADD TO CART</button>
                 </div>
             </div>
             <div class="box">
-                <img src="img/bread3.jpg" alt="product3">
+                <img src="img/bread4.jpg" alt="Cinnamon swirl brioche">
                 <div class="productDesc">
-                    <h3>Product3</h3>
+                    <h3>Cinnamon Swirl Brioche</h3>
+                    <p>Enriched brioche ribboned with cinnamon and brown sugar.</p>
                     <p>$11.20</p>
-                    <a href="#" class="btn shopBtn">SHOP NOW</a>
+                    <button class="btn shopBtn" type="button" data-product-id="cinnamon-brioche">ADD TO CART</button>
                 </div>
             </div>
             <div class="box">
-                <img src="img/bread3.jpg" alt="product3">
+                <img src="img/bread5.jpg" alt="Seeded multigrain bread">
                 <div class="productDesc">
-                    <h3>Product3</h3>
+                    <h3>Seeded Multigrain</h3>
+                    <p>A hearty wholegrain loaf topped with toasted mixed seeds.</p>
                     <p>$11.20</p>
-                    <a href="#" class="btn shopBtn">SHOP NOW</a>
+                    <button class="btn shopBtn" type="button" data-product-id="seeded-multigrain">ADD TO CART</button>
                 </div>
             </div>
             <div class="box">
-                <img src="img/bread3.jpg" alt="product3">
+                <img src="img/bread6.jpg" alt="Soft milk bread loaf">
                 <div class="productDesc">
-                    <h3>Product3</h3>
+                    <h3>Soft Milk Bread</h3>
+                    <p>Light, pillowy bread with a tender crumb and a gentle sweetness.</p>
                     <p>$11.20</p>
-                    <a href="#" class="btn shopBtn">SHOP NOW</a>
+                    <button class="btn shopBtn" type="button" data-product-id="soft-milk-bread">ADD TO CART</button>
                 </div>
             </div>
         </div>

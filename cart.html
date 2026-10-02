@@ -8,6 +8,7 @@
     <!-- fontawesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
+    <script src="cart.js" defer></script>
 </head>
 <body>
     <header>
@@ -28,6 +29,140 @@
             <a href="#"><i class="fa-solid fa-circle-user"></i></a>
         </div>
     </header>
+
+    <section class="page-banner cart-banner" aria-labelledby="cart-banner-title">
+        <div class="page-banner-content">
+            <p class="banner-kicker">FRESH FROM OUR BAKERY</p>
+            <h1 id="cart-banner-title">Your basket</h1>
+            <p>A few good things, headed your way.</p>
+        </div>
+    </section>
+
+    <main class="cart-page">
+        <div class="cart-return">
+            <a class="cart-continue" href="menu.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to menu</a>
+        </div>
+
+        <section class="cart-layout" aria-label="Shopping cart and checkout">
+            <div class="cart-items-panel">
+                <div class="cart-panel-heading">
+                    <h2>Your items <span id="item-count">3 items</span></h2>
+                    <span class="cart-fulfillment"><i class="fa-solid fa-basket-shopping" aria-hidden="true"></i> Baked fresh daily</span>
+                </div>
+
+                <div class="cart-items" id="cart-items">
+                    <article class="cart-item" data-product-id="country-sourdough" data-price="50.00">
+                        <img class="cart-item-image" src="img/bread1.jpg" alt="Country sourdough bread">
+                        <div class="cart-item-info">
+                            <p class="cart-item-category">BAKERY FAVORITE</p>
+                            <h3>Country Sourdough</h3>
+                            <p class="cart-item-note">Slow-fermented for a crisp crust and a soft, tangy crumb.</p>
+                            <button class="cart-remove" type="button" aria-label="Remove Country Sourdough"><i class="fa-regular fa-trash-can" aria-hidden="true"></i> Remove</button>
+                        </div>
+                        <label class="cart-quantity-label">Qty
+                            <input class="cart-quantity" type="number" min="1" max="20" value="1" aria-label="Quantity of Country Sourdough">
+                        </label>
+                            <p class="cart-item-price">$<span class="line-total">50.00</span></p>
+                    </article>
+
+                        <article class="cart-item" data-product-id="honey-oat-loaf" data-price="20.10">
+                            <img class="cart-item-image" src="img/bread2.jpg" alt="Honey oat loaf">
+                        <div class="cart-item-info">
+                            <p class="cart-item-category">OVEN-FRESH</p>
+                                <h3>Honey Oat Loaf</h3>
+                                <p class="cart-item-note">Soft-baked bread finished with golden oats and a touch of honey.</p>
+                                <button class="cart-remove" type="button" aria-label="Remove Honey Oat Loaf"><i class="fa-regular fa-trash-can" aria-hidden="true"></i> Remove</button>
+                        </div>
+                        <label class="cart-quantity-label">Qty
+                                <input class="cart-quantity" type="number" min="1" max="20" value="1" aria-label="Quantity of Honey Oat Loaf">
+                        </label>
+                            <p class="cart-item-price">$<span class="line-total">20.10</span></p>
+                    </article>
+
+                        <article class="cart-item" data-product-id="butter-croissant" data-price="11.20">
+                            <img class="cart-item-image" src="img/bread3.jpg" alt="Classic butter croissant">
+                        <div class="cart-item-info">
+                            <p class="cart-item-category">BAKED THIS MORNING</p>
+                            <h3>Butter Croissant</h3>
+                                <p class="cart-item-note">Delicate, flaky layers baked until golden with real butter.</p>
+                            <button class="cart-remove" type="button" aria-label="Remove Butter Croissant"><i class="fa-regular fa-trash-can" aria-hidden="true"></i> Remove</button>
+                        </div>
+                        <label class="cart-quantity-label">Qty
+                            <input class="cart-quantity" type="number" min="1" max="20" value="2" aria-label="Quantity of Butter Croissant">
+                        </label>
+                        <p class="cart-item-price">$<span class="line-total">22.40</span></p>
+                    </article>
+                </div>
+                <p class="cart-empty" id="cart-empty" hidden>Your basket is empty. <a href="menu.html">Find something fresh</a></p>
+            </div>
+
+            <form class="checkout-panel" id="checkout-form">
+                <div class="checkout-heading">
+                    <p class="cart-eyebrow">ALMOST THERE</p>
+                    <h2>Checkout</h2>
+                </div>
+
+                <fieldset class="checkout-fields">
+                    <legend>Delivery details</legend>
+                    <label class="checkout-field">Full name
+                        <input name="name" type="text" autocomplete="name" placeholder="Your name" required>
+                    </label>
+                    <label class="checkout-field">Email address
+                        <input name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+                    </label>
+                    <label class="checkout-field">Delivery address
+                        <input name="address" type="text" autocomplete="street-address" placeholder="Street, city, township" required>
+                    </label>
+                </fieldset>
+
+                <fieldset class="payment-options">
+                    <legend>Payment method</legend>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="cash" checked>
+                        <span class="payment-icon"><i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i></span>
+                        <span class="payment-copy"><strong>Cash on delivery</strong><small>Pay when your order arrives</small></span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="visa">
+                        <span class="payment-icon payment-visa"><i class="fa-brands fa-cc-visa" aria-hidden="true"></i></span>
+                        <span class="payment-copy"><strong>Visa card</strong><small>Credit or debit card</small></span>
+                    </label>
+                    <div class="payment-extra" id="visa-fields" hidden>
+                        <label class="checkout-field">Card number
+                            <input name="cardNumber" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456" pattern="[0-9 ]{13,23}" maxlength="23">
+                        </label>
+                        <div class="payment-field-row">
+                            <label class="checkout-field">Expiry date
+                                <input name="cardExpiry" type="text" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/YY" pattern="(0[1-9]|1[0-2])/[0-9]{2}" maxlength="5">
+                            </label>
+                            <label class="checkout-field">Security code
+                                <input name="cardCvc" type="text" inputmode="numeric" autocomplete="cc-csc" placeholder="CVC" pattern="[0-9]{3,4}" maxlength="4">
+                            </label>
+                        </div>
+                    </div>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="kpay">
+                        <span class="payment-icon payment-kpay"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></span>
+                        <span class="payment-copy"><strong>KBZPay (KPay)</strong><small>Pay with your mobile wallet</small></span>
+                    </label>
+                    <div class="payment-extra" id="kpay-fields" hidden>
+                        <label class="checkout-field">KPay phone number
+                            <input name="kpayPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="09 123 456 789" pattern="[0-9+ ()-]{7,20}">
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="order-summary" aria-live="polite">
+                    <div><span>Subtotal</span><strong>$<span id="cart-subtotal">92.50</span></strong></div>
+                    <div><span>Delivery</span><strong>$<span id="cart-delivery">2.50</span></strong></div>
+                    <div class="order-total"><span>Total</span><strong>$<span id="cart-total">95.00</span></strong></div>
+                </div>
+                <button class="checkout-button" id="checkout-button" type="submit">Place order <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                <p class="checkout-note"><i class="fa-solid fa-lock" aria-hidden="true"></i> Secure checkout · Payment is collected on delivery or handled by your selected provider.</p>
+                <p class="checkout-message" id="checkout-message" role="status" hidden></p>
+            </form>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-container">

@@ -8,6 +8,7 @@
     <!-- fontawesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
+    <script src="cart.js" defer></script>
 </head>
 <body>
     <header>
@@ -29,56 +30,70 @@
         </div>
     </header>
 
+    <section class="page-banner drink-banner" aria-labelledby="drink-banner-title">
+        <div class="page-banner-content">
+            <p class="banner-kicker">POURED WITH CARE</p>
+            <h1 id="drink-banner-title">A good day starts here.</h1>
+            <p>Find your favorite coffee, made fresh for the moment.</p>
+        </div>
+    </section>
+
     <!-- product section -->
     <section class="product-section">
         <h2>Best Seller</h2>
         <div class="productBox">
             <div class="box">
-                <img src="img/bread1.jpg" alt="product1">
+                <img src="img/coffee4.jpg" alt="Freshly brewed espresso">
                 <div class="productDesc">
-                    <h3>Product1</h3>
+                    <h3>Classic Espresso</h3>
+                    <p>A rich, full-bodied shot pulled fresh from our house-roasted beans.</p>
                     <p>$50.00</p>
-                    <a href="#" class="btn shopBtn">SHOP NOW</a>
+                    <button class="btn shopBtn" type="button" data-product-id="classic-espresso">ADD TO CART</button>
                 </div>
             </div>
             <div class="box">
-                <img src="img/bread2.jpg" alt="product2">
+                <img src="img/coffee5.jpg" alt="Creamy cafe latte">
                 <div class="productDesc">
-                    <h3>Product2</h3>
+                    <h3>Silky Cafe Latte</h3>
+                    <p>Espresso blended with steamed milk and a smooth layer of foam.</p>
                     <p>$20.10</p>
-                    <a href="#" class="btn shopBtn">SHOP NOW</a>
+                    <button class="btn shopBtn" type="button" data-product-id="silky-cafe-latte">ADD TO CART</button>
                 </div>
             </div>
             <div class="box">
-                <img src="img/bread3.jpg" alt="product3">
+                <img src="img/coffee6.jpg" alt="Classic cappuccino topped with foam">
                 <div class="productDesc">
-                    <h3>Product3</h3>
+                    <h3>Classic Cappuccino</h3>
+                    <p>A balanced espresso with velvety steamed milk and airy foam.</p>
                     <p>$11.20</p>
-                    <a href="#" class="btn shopBtn">SHOP NOW</a>
+                    <button class="btn shopBtn" type="button" data-product-id="classic-cappuccino">ADD TO CART</button>
                 </div>
             </div>
             <div class="box">
-                <img src="img/bread3.jpg" alt="product3">
+                <img src="img/coffee7.jpg" alt="Iced coffee served chilled">
                 <div class="productDesc">
-                    <h3>Product3</h3>
+                    <h3>Chilled Iced Coffee</h3>
+                    <p>Freshly brewed coffee poured over ice for a crisp, refreshing sip.</p>
                     <p>$11.20</p>
-                    <a href="#" class="btn shopBtn">SHOP NOW</a>
+                    <button class="btn shopBtn" type="button" data-product-id="chilled-iced-coffee">ADD TO CART</button>
                 </div>
             </div>
             <div class="box">
-                <img src="img/bread3.jpg" alt="product3">
+                <img src="img/coffee8.jpg" alt="Chocolate mocha coffee">
                 <div class="productDesc">
-                    <h3>Product3</h3>
+                    <h3>Chocolate Mocha</h3>
+                    <p>Espresso, steamed milk, and rich chocolate finished with soft foam.</p>
                     <p>$11.20</p>
-                    <a href="#" class="btn shopBtn">SHOP NOW</a>
+                    <button class="btn shopBtn" type="button" data-product-id="chocolate-mocha">ADD TO CART</button>
                 </div>
             </div>
             <div class="box">
-                <img src="img/bread3.jpg" alt="product3">
+                <img src="img/coffee9.jpg" alt="Smooth cold brew coffee">
                 <div class="productDesc">
-                    <h3>Product3</h3>
+                    <h3>Slow-Steeped Cold Brew</h3>
+                    <p>Slow-steeped for a smooth, mellow coffee with a naturally sweet finish.</p>
                     <p>$11.20</p>
-                    <a href="#" class="btn shopBtn">SHOP NOW</a>
+                    <button class="btn shopBtn" type="button" data-product-id="slow-steeped-cold-brew">ADD TO CART</button>
                 </div>
             </div>
         </div>
