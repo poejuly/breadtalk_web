@@ -22,7 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
     const primaryNavigation = document.getElementById('primary-navigation');
 
+    if (!navToggle || !primaryNavigation) {
+        return;
+    }
+
     navToggle.addEventListener('click', function() {
-        primaryNavigation.classList.toggle('open');
+        const isOpen = primaryNavigation.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
     });
 });
